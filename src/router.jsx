@@ -3,6 +3,7 @@ import AppLayout from "./layouts/AppLayout";
 import AppView from "./views/AppView";
 import OtraView from "./views/OtraView";
 import AmigoView from "./views/AmigoView";
+import ParamView from "./views/ParamView";
 
 export default function Router() {
     return (
@@ -12,6 +13,7 @@ export default function Router() {
                     <Route path='/main' element = {<AppView />}/>
                     <Route path='/otra' element = {<OtraView />}/>
                     <Route path="/amigo" element = {<AmigoView/>}/>
+                    <Route path='/parametro/:id' element = {<ParamView/>}/>
 
                 </Route>
             </Routes>
