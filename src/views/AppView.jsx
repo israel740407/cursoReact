@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SaludoComponent from '../components/SaludoComponent'
 import CardChilden from '../components/CardChilden'
@@ -9,6 +9,7 @@ import ButtonActionComponent from '../components/ButtonActionComponent'
 import ListaComponent from '../components/ListaComponent'
 import ProductoComponent from '../components/ProductoComponent'
 import AlumnoComponent from '../components/AlumnoComponent'
+import ProductCard from '../components/ProductCard'
 
 export default function AppView() {
   const parametro = 2323
@@ -44,6 +45,10 @@ export default function AppView() {
   const handleSelection = (elemento) => {
     console.log("Evento:", elemento)
   }
+
+  useEffect(() => {
+    console.log("Este es el useeffect ejecutandose")
+  },[isTrue])
 
   // if(isTrue){
   //   return <div>Soy verdadero</div>
@@ -100,6 +105,9 @@ export default function AppView() {
         />
       ))
     }
+
+
+  
 
     <br />
     {
